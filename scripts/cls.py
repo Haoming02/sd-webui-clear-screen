@@ -11,6 +11,9 @@ class CLS(scripts.Script):
         return scripts.AlwaysVisible
 
     def ui(self, is_img2img):
+        if is_img2img == True:
+            return None
+
         reload_button = gr.Button('🆑', elem_id='cls_btn')
             
         def clear_console():
