@@ -9,13 +9,10 @@ class CLS(scripts.Script):
         return "Clear Screen"
 
     def show(self, is_img2img):
-        if is_img2img == True:
-            return None
-
-        return scripts.AlwaysVisible
+        return scripts.AlwaysVisible if not is_img2img else None
 
     def ui(self, is_img2img):
-        if is_img2img == True:
+        if is_img2img is True:
             return None
 
         def clear_console():
@@ -31,7 +28,7 @@ class CLS(scripts.Script):
 
 def on_ui_settings():
     shared.opts.add_option("cls_on_reload", shared.OptionInfo(
-        False, "Automatically Clear Screen on ReloadUI", gr.Checkbox, {"interactive": True}, section=('system', 'System')
+        False, "Automatically Clear Screen on ReloadUI", section=('system', 'System')
     ))
 
 script_callbacks.on_ui_settings(on_ui_settings)
