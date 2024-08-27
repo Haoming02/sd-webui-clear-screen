@@ -1,4 +1,4 @@
-onUiLoaded(async () => {
+onUiLoaded(() => {
     const container = document.getElementById('quicksettings');
     const btn = document.getElementById('cls_btn');
     btn.classList.add('tool');
