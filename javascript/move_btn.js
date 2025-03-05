@@ -1,6 +1,7 @@
-onUiLoaded(() => {
-    const container = document.getElementById('quicksettings');
-    const btn = document.getElementById('cls_btn');
-    btn.classList.add('tool');
-    container.appendChild(btn);
-});
+(function () {
+    onUiLoaded(() => {
+        const container = document.getElementById('quicksettings');
+        const btn = document.getElementById('cls_btn');
+        container.appendChild(btn);
+    });
+})();
